@@ -1,5 +1,22 @@
 apply plugin: 'java'
+
 dependencies {
-    compile group: 'commons-collections', name: 'commons-collections', version: '3.2'
-    testCompile group: 'junit', name: 'junit', version: '3.+'
+    testCompile 'junit:junit:4.11'
+}
+
+repositories {
+  jcenter()
+}
+
+sourceSets {
+     main {
+        java {
+            srcDir 'src'
+        }
+    }
+    test {
+        java {
+            srcDirs = ["test"]
+        }
+    }
 }
